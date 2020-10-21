@@ -11,3 +11,7 @@
 then run
 
 `yum install jdk-14.0.2_linux-x64_bin.rpm`
+
+## To forward traffic from port 80 to 8080
+
+`iptables -A PREROUTING -t nat -p tcp --dport 80 -j REDIRECT --to-port 8080`
